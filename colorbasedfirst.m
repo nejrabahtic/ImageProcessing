@@ -93,6 +93,12 @@ imshow(fabric), title('fabric');
 %putting variable in workspace
 assignin('base', 'fabric', fabric);
  
+num = size(fabric);
+fabricc = num2str(num);
+
+%putting variables in workspace on gui 
+set(handles.fabricc, 'String', fabricc);
+
 
 % --- Executes on button press in pushbutton2.
 function pushbutton2_Callback(hObject, eventdata, handles)
@@ -122,6 +128,11 @@ assignin('base', 'nColors', nColors);
 assignin('base', 'count', count);
 assignin('base', 'sample_regions', sample_regions);
 assignin('base', 'region_coordinates', region_coordinates);
+
+nColorss = num2str(nColors);
+
+%putting variables in workspace on gui 
+set(handles.nColorss, 'String', nColorss);
 
 
 % --- Executes on button press in pushbutton6.
@@ -169,6 +180,30 @@ assignin('base', 'a', a);
 assignin('base', 'b', b);
 assignin('base', 'color_markers', color_markers);
 
+countt = mat2str(count);
+numa = size(a);
+numb = size(b);
+numcm = size(color_markers);
+numlf = size(lab_fabric);
+numsr = size(sample_regions);
+numrg = size(region_coordinates);
+
+aa = num2str(numa);
+bb = num2str(numb);
+colormarkerss = num2str(numcm);
+lab_fabricc = num2str(numlf);
+sample_regionss = num2str(numsr);
+region_coordinatess = num2str(numrg);
+
+%putting variables in workspace on gui 
+set(handles.countt, 'String', countt);
+set(handles.aa, 'String', aa);
+set(handles.bb, 'String', bb);
+set(handles.colormarkerss, 'String', colormarkerss);
+set(handles.lab_fabricc, 'String', lab_fabricc);
+set(handles.sample_regionss, 'String', sample_regionss);
+set(handles.region_coordinatess, 'String', region_coordinatess);
+
 
 % --- Executes on button press in pushbutton3.
 function pushbutton3_Callback(hObject, eventdata, handles)
@@ -215,6 +250,15 @@ assignin('base', 'b', b);
 assignin('base', 'color_markers', color_markers);
 assignin('base', 'color_labels', color_labels);
 assignin('base', 'label', label);
+
+numl = size(label); 
+
+color_labelss = mat2str(color_labels);
+labell = num2str(numl);
+
+%putting variables in workspace on gui 
+set(handles.colorlabels, 'String', color_labelss);
+set(handles.labell, 'String', labell);
 
 
 % --- Executes on button press in pushbutton4.
@@ -277,6 +321,19 @@ assignin('base', 'rgb_label', rgb_label);
 assignin('base', 'segmented_images', segmented_images);
 assignin('base', 'color', color);
 
+numrl = size(rgb_label);
+numsi = size(segmented_images);
+numc = size(color);
+
+rgb_labelss = num2str(numrl);
+segmented_imagess = num2str(numsi);
+colorr = num2str(numc);
+
+%putting variables in workspace on gui 
+set(handles.rgb_labelss, 'String', rgb_labelss);
+set(handles.segmented_imagess, 'String', segmented_imagess);
+set(handles.colorr, 'String', colorr);
+
 
 % --- Executes on button press in pushbutton5.
 function pushbutton5_Callback(hObject, eventdata, handles)
@@ -330,6 +387,14 @@ assignin('base', 'segmented_images', segmented_images);
 assignin('base', 'color', color);
 assignin('base', 'purple', purple);
 assignin('base', 'plot_labels', plot_labels);
+
+purplee = mat2str(purple);
+num = size(plot_labels);
+plot_labelss = mat2str(num);
+
+%putting variables in workspace on gui 
+set(handles.purplee, 'String', purplee);
+set(handles.plot_labelss, 'String', plot_labelss);
 
 
 % --- Executes on button press in pushbutton7.

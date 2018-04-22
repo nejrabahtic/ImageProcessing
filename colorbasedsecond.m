@@ -94,11 +94,17 @@ he = imread('hestain.png');
 axes(handles.axes1);
 imshow(he), title('H&E image');
 text(size(he,2),size(he,1)+15,...
-     'Image courtesy of Alan Partin, Johns Hopkins University', ...
+     'Image courtesy of Alan Partin', ...
      'FontSize',6,'HorizontalAlignment','right');
  
 %putting variable in workspace
 assignin('base', 'he', he);
+
+num = size(he);
+hee = num2str(num);
+
+%putting variables in workspace on gui 
+set(handles.he, 'String', hee);
 
 % --- Executes on button press in pushbutton3.
 function pushbutton3_Callback(hObject, eventdata, handles)
@@ -116,6 +122,15 @@ lab_he = applycform(he,cform);
 assignin('base', 'he', he);
 assignin('base', 'cform', cform);
 assignin('base', 'lab_he', lab_he);
+
+numcf = size(cform);
+numlh = size(lab_he);
+cformm = num2str(numcf);
+lab_hee = num2str(numlh);
+
+%putting variables in workspace on gui 
+set(handles.cform, 'String', cformm);
+set(handles.lab_he, 'String', lab_hee);
 
 
 % --- Executes on button press in pushbutton4.
@@ -150,6 +165,24 @@ assignin('base', 'nColors', nColors);
 assignin('base', 'cluster_idx', cluster_idx);
 assignin('base', 'cluster_center', cluster_center);
 
+numab = size(ab);
+numci = size(cluster_idx);
+
+abb = num2str(numab);
+nrowss = mat2str(nrows);
+ncolss = mat2str(ncols);
+nColorss = num2str(nColors);
+cluster_idxs = num2str(numci);
+cluster_centers = mat2str(cluster_center);
+
+%putting variables in workspace on gui 
+set(handles.ab, 'String', abb);
+set(handles.nrows, 'String', nrowss);
+set(handles.ncols, 'String', ncolss);
+set(handles.nColors, 'String', nColorss);
+set(handles.cluster_idx, 'String', cluster_idxs);
+set(handles.cluster_center, 'String', cluster_centers);
+
 
 % --- Executes on button press in pushbutton5.
 function pushbutton5_Callback(hObject, eventdata, handles)
@@ -183,6 +216,13 @@ assignin('base', 'nColors', nColors);
 assignin('base', 'cluster_idx', cluster_idx);
 assignin('base', 'cluster_center', cluster_center);
 assignin('base', 'pixel_labels', pixel_labels);
+
+numpl = size(pixel_labels);
+
+pixel_labelss = num2str(numpl);
+
+%putting variables in workspace on gui 
+set(handles.pixel_labels, 'String', pixel_labelss);
 
 
 % --- Executes on button press in pushbutton6.
@@ -230,6 +270,21 @@ assignin('base', 'color', color);
 assignin('base', 'k', k);
 assignin('base', 'rgb_label', rgb_label);
 assignin('base', 'segmented_images', segmented_images);
+
+numc = size(color);
+numrl = size(rgb_label);
+numsi = size(segmented_images);
+
+colorr = num2str(numc);
+kk = num2str(k); 
+rgb_labels = num2str(numrl);
+segmented_imagess = num2str(numsi);
+
+%putting variables in workspace on gui 
+set(handles.color, 'String', colorr);
+set(handles.k, 'String', kk);
+set(handles.rgb_label, 'String', rgb_labels);
+set(handles.segmented_images, 'String', segmented_imagess);
 
 
 % --- Executes on button press in pushbutton7.
@@ -296,6 +351,36 @@ assignin('base', 'blue_idx', blue_idx);
 assignin('base', 'blue_nuclei', blue_nuclei);
 assignin('base', 'idx', idx);
 assignin('base', 'is_light_blue', is_light_blue);
+
+numnl = size(nuclei_labels);
+numl = size(L);
+numlb = size(L_blue);
+numbi = size(blue_idx);
+numbn = size(blue_nuclei);
+numilb = size(is_light_blue);
+
+blue_cluster_nums = num2str(blue_cluster_num); 
+mean_cluster_values = mat2str(mean_cluster_value);
+tmps = mat2str(tmp);
+nuclei_labelss = num2str(numnl);
+ls = num2str(numl);
+L_blues = num2str(numlb);
+blue_idxs = num2str(numbi);
+blue_nucleis = num2str(numbn);
+idxs = mat2str(idx);
+is_light_blues = num2str(numilb);
+
+%putting variables in workspace on gui 
+set(handles.blue_cluster_num, 'String', blue_cluster_nums);
+set(handles.mean_cluster_value, 'String', mean_cluster_values);
+set(handles.tmp, 'String', tmps);
+set(handles.nuclei_labels, 'String', nuclei_labelss);
+set(handles.L, 'String', ls);
+set(handles.L_blue, 'String', L_blues);
+set(handles.blue_idx, 'String', blue_idxs);
+set(handles.blue_nuclei, 'String', blue_nucleis);
+set(handles.idx, 'String', idxs);
+set(handles.is_light_blue, 'String', is_light_blues);
 
 
 % --- Executes on button press in pushbutton8.

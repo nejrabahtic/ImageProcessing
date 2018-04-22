@@ -97,6 +97,13 @@ imshow(rgb);
 %putting variable in workspace
 assignin('base', 'rgb', rgb);
 
+num = size(rgb);
+rgbb = num2str(num);
+
+%putting variables in workspace on gui 
+set(handles.rgb, 'String', rgbb);
+
+
 
 % --- Executes on button press in pushbutton3.
 function pushbutton3_Callback(hObject, eventdata, handles)
@@ -114,6 +121,13 @@ d = imdistline;
 %putting variable in workspace
 assignin('base', 'rgb', rgb);
 assignin('base', 'd', d);
+
+num = size(d);
+dd = num2str(num);
+
+%putting variables in workspace on gui 
+set(handles.d, 'String', dd);
+
 
 
 % --- Executes on button press in pushbutton13.
@@ -156,6 +170,13 @@ assignin('base', 'rgb', rgb);
 assignin('base', 'd', d);
 assignin('base', 'gray_image', gray_image);
 
+num = size(gray_image);
+gray_imagee = num2str(num);
+
+%putting variables in workspace on gui 
+set(handles.gray_image, 'String', gray_imagee);
+
+
 
 % --- Executes on button press in pushbutton14.
 function pushbutton14_Callback(hObject, eventdata, handles)
@@ -176,6 +197,13 @@ assignin('base', 'd', d);
 assignin('base', 'gray_image', gray_image);
 assignin('base', 'centers', centers);
 assignin('base', 'radii', radii);
+
+centerss = mat2str(centers);
+radiii = mat2str(radii);
+
+%putting variables in workspace on gui
+set(handles.centers, 'String', centerss);
+set(handles.radiii, 'String', radiii);
 
 
 % --- Executes on button press in pushbutton5.
@@ -200,6 +228,17 @@ assignin('base', 'd', d);
 assignin('base', 'gray_image', gray_image);
 assignin('base', 'centers', centers);
 assignin('base', 'radii', radii);
+
+numc = size(centers);
+
+centerss = num2str(numc);
+radiii = mat2str(radii);
+pom = '...';
+
+%putting variables in workspace on gui
+set(handles.centers, 'String', centerss);
+set(handles.radii, 'String', radiii);
+set(handles.radiii, 'String', pom);
 
 
 % --- Executes on button press in pushbutton6.
@@ -227,6 +266,13 @@ assignin('base', 'gray_image', gray_image);
 assignin('base', 'centers', centers);
 assignin('base', 'radii', radii);
 assignin('base', 'h', h);
+
+numh = size(h);
+
+hh = num2str(numh);
+
+%putting variables in workspace on gui
+set(handles.h, 'String', hh);
 
 
 % --- Executes on button press in pushbutton15.
@@ -264,6 +310,20 @@ assignin('base', 'centers', centers);
 assignin('base', 'radii', radii);
 assignin('base', 'h', h);
 assignin('base', 'ans', ans);
+
+numc = size(centers);
+numr = size(radii); 
+
+centerss = num2str(numc);
+radiii = num2str(numr);
+anss = num2str(ans);
+pom = '...';
+
+%putting variables in workspace on gui
+set(handles.centers, 'String', centerss);
+set(handles.radiii, 'String', radiii);
+set(handles.radii, 'String', pom);
+set(handles.ans, 'String', anss);
 
 
 % --- Executes on button press in pushbutton16.
@@ -328,6 +388,16 @@ assignin('base', 'radii', radii);
 assignin('base', 'h', h);
 assignin('base', 'ans', ans);
 
+numc = size(centers);
+numr = size(radii); 
+
+centerss = num2str(numc);
+radiii = num2str(numr);
+
+%putting variables in workspace on gui
+set(handles.centers, 'String', centerss);
+set(handles.radiii, 'String', radiii);
+
 
 % --- Executes on button press in pushbutton19.
 function pushbutton19_Callback(hObject, eventdata, handles)
@@ -359,6 +429,14 @@ assignin('base', 'centers', centers);
 assignin('base', 'radii', radii);
 assignin('base', 'h', h);
 assignin('base', 'ans', ans);
+
+numa = size(ans);
+
+anss = num2str(numa);
+
+%putting variables in workspace on gui
+set(handles.ans, 'String', anss);
+
 
 % --- Executes on button press in pushbutton8.
 function pushbutton8_Callback(hObject, eventdata, handles)
@@ -417,6 +495,13 @@ assignin('base', 'ans', ans);
 assignin('base', 'centersBright', centersBright);
 assignin('base', 'radiiBright', radiiBright);
 
+radiiBrights = mat2str(radiiBright);
+centersBrights = mat2str(centersBright);
+
+%putting variables in workspace on gui
+set(handles.centersBright, 'String', centersBrights);
+set(handles.radiiBright, 'String', radiiBrights);
+
 
 % --- Executes on button press in pushbutton10.
 function pushbutton10_Callback(hObject, eventdata, handles)
@@ -452,6 +537,13 @@ assignin('base', 'ans', ans);
 assignin('base', 'centersBright', centersBright);
 assignin('base', 'radiiBright', radiiBright);
 assignin('base', 'hBright', hBright);
+
+numhb = size(hBright);
+
+hBrights = num2str(numhb);
+
+%putting variables in workspace on gui
+set(handles.hBright, 'String', hBrights);
 
 
 % --- Executes on button press in pushbutton11.
@@ -492,6 +584,15 @@ assignin('base', 'centersBright', centersBright);
 assignin('base', 'radiiBright', radiiBright);
 assignin('base', 'hBright', hBright);
 assignin('base', 'metricBright', metricBright);
+
+radiiBrights = mat2str(radiiBright);
+centersBrights = mat2str(centersBright);
+metricBrights = mat2str(metricBright);
+
+%putting variables in workspace on gui
+set(handles.centersBright, 'String', centersBrights);
+set(handles.radiiBright, 'String', radiiBrights);
+set(handles.metricBright, 'String', metricBrights);
 
 
 % --- Executes on button press in pushbutton12.
