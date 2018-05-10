@@ -80,7 +80,7 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 closereq;
 
-firstgui();
+colorbasedfirst;
 
 % --- Executes on button press in pushbutton2.
 function pushbutton2_Callback(hObject, eventdata, handles)
@@ -89,7 +89,7 @@ function pushbutton2_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 closereq;
 
-firstguii();
+colorbasedsecond;
 
 % --- Executes on button press in pushbutton3.
 function pushbutton3_Callback(hObject, eventdata, handles)
@@ -98,7 +98,7 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 closereq;
 
-firstguiii();
+detectandmeasure;
 
 
 % --- Executes on button press in pushbutton4.
